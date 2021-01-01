@@ -2,9 +2,13 @@
 
 int main()
 {
-	int m1 = 4;
-	int m2 = 5;
-	int product = m1*m2;
-	printProduct(m1, m2, product);
-	return 0;
+    char operation = '*';
+    float input1 = 9.8;
+    float input2 = 2.3;
+    float result;
+    
+    calculate(input1, input2, operation, result);
+    printEquation(input1, input2, operation, result);
+    return 0;
 }
+

@@ -1,6 +1,32 @@
 #include<iostream>
-
-void printProduct(int i, int j, int answer)
+using namespace std;
+void calculate(float input1, float input2, char op, float &result)
 {
-	std::cout<<i<<" * "<<j<<" = "<<answer;
+    switch(op)
+    {
+        case('+'):
+        {
+            result = input1+input2;
+            break;
+        }
+        case('-'):
+        {
+            result = input1-input2;
+            break;
+        }
+        case('*'):
+        {
+            result = input1*input2;
+            break;
+        }
+        case('/'):
+        {
+            result = input1/input2;
+            break;
+        }
+    }
+}
+void printEquation(float input1, float input2, char op, float &result)
+{
+    cout<<input1<<" "<<op<<" "<<input2<<" = "<<result;
 }
