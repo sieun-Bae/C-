@@ -1,35 +1,29 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void printVector(vector<float>);
 
 int main()
 {
-	const int row=4;
-	const int col=4;
+	vector<float> vFloat;
+	vector<float>::iterator it;
+	cout<<vFloat.size();
 
-	int arr[row][col];
-	int vector[row], product[row];
-	int sum;
+	vFloat.resize(10);
+	cout<<vFloat.size();
 
-	for (int i=0;i<row;i++){
-		for (int j=0;j<row;j++){
-			std::cin>>arr[i][j];
-			std::cout<<"arr["<<i<<"]["<<j<<"]="<<arr[i][j]<<"\n";
-		}
-	}
-	for (int i=0;i<row;i++)
-	{
-		std::cout<<"vector["<<i<<"]=\n";
-		std::cin>>vector[i];
-	}	
-	for (int i=0;i<row;i++){
-		sum =0;
-		for(int j=0;j<col;j++)
-		{
-			sum+=(arr[i][j]*vector[i]);
-		}
-		product[i]=sum;
-	}
-	for(int i=0;i<row;i++){
-		std::cout<<"product["<<i<<"]="<<product[i]<<"\n";
-	}
+	vFloat.assign(10, 3.3);
+	
+	printVector(vFloat);
 	return 0;
+}
+
+void printVector(vector<float> vIn)
+{
+	vector<float>::iterator it;
+	for (it=vIn.begin();it!=vIn.end();++it)
+	{
+		cout<<*it<<" ";
+	}
 }
