@@ -2,21 +2,25 @@
 
 int main()
 {
-	StudentRecord<int> srInt(3);
-	srInt.setId(111111);
-    srInt.printGrades();
- 
-    StudentRecord<char> srChar('B');
-    srChar.setId(222222);
-    srChar.printGrades();
-
-    StudentRecord<float> srFloat(3.333);
-    srFloat.setId(333333);
-    srFloat.printGrades();
+    Multiplier<int> multi1;
+    Multiplier<float> multi3;
     
-    StudentRecord<string> srString("B-");
-    srString.setId(4444);
-    srString.printGrades();
+    int input1,input2;
+    cin>>input1;
+    cin>>input2;
     
-	return 0;
+    multi1.setM1(input1);
+    multi1.setM2(input2);
+    multi1.setProduct();
+    multi1.printEquation();
+    
+    cout<<"\n";
+    float input3, input4;
+    cin>>input3;
+    cin>>input4;    
+    multi3.setM1(input3);
+    multi3.setM2(input4);
+    multi3.setProduct();
+    multi3.printEquation();
+    return 0;
 }
