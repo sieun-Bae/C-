@@ -18,6 +18,21 @@ int main()
 	e1 -> setPayRate(12000.00);
 	cout<<"e1 pay: $"<<e1->calcWeeklyPay();
 
+	level = "hourly";
+	Employee* e2;
+
+	if (status != level)
+	{
+		e2 = new Employee();
+	}
+	else
+	{
+		e2 = new Manager();
+	}
+
+	e2 -> setPayRate(10.00);
+	cout<<"\ne2 pay: $"<<e2->calcWeeklyPay();
 	delete e1;
+	delete e2;
 	return 0;
 }
